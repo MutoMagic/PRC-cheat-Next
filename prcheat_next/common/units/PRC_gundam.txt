@@ -1,0 +1,88 @@
+sub_units = {
+
+	PRC_gundam = {
+		sprite = "medium_armor"
+		map_icon_category = armored
+		priority = 2510
+		active = yes
+		
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+			
+			category_special_forces	#特战
+			category_line_artillery	#线膛炮
+			category_artillery		#炮兵
+		}
+		
+		special_forces = yes	#特种部队
+		can_be_parachuted = yes	#伞兵
+
+		combat_width = 10
+
+		need = {
+			PRC_gundam_equipment = 5
+		}
+		manpower = 500
+		max_organisation = 10
+		max_strength = 200
+		default_morale = 30
+		training_time = 180
+		weight = 1.5
+		
+		supply_consumption = 0.25
+
+		#Tanks are awesome
+		soft_attack = 0.5
+
+		forest = {
+		    #attack = -0.3
+			#movement = -0.4
+		    attack = 3
+			movement = 4
+		}
+		hills = 	{
+		    #attack = -0.1
+		    attack = 1
+		}
+		mountain = 	{
+		    attack = 2
+		}
+		jungle = {
+		    #attack = -0.4
+			#movement = -0.4
+		    attack = 4
+			movement = 4
+		}
+		marsh = {
+		    #attack = -0.1 
+			#movement = -0.1
+		    attack = 1 
+			movement = 1
+		}
+		urban = {
+			#attack = -0.4
+			#defence = -0.1
+			attack = 4
+			defence = 1
+		}
+		river = { 
+			#attack = -0.2
+			#movement = -0.2
+			attack = 2
+			movement = 2
+		}
+		amphibious = { 
+			#attack = -0.7
+			attack = 7
+		}
+	}
+}

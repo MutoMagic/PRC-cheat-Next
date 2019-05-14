@@ -1,0 +1,1898 @@
+focus_tree = {
+	id = comchina_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PRC
+		}
+	}
+	
+	default = no
+	
+
+
+#########遵义会议#########
+	focus = {
+		id = PRC_zunyi_focus
+		icon = GFX_goal_support_communism
+		mutually_exclusive = { focus = zxmz_focus }
+		mutually_exclusive = { focus = zxdc_focus }
+		x = 3
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 100
+			add_country_leader_trait = PRC_wdlx 
+		}
+}
+
+#########走向民主
+	focus = {
+		id = zxmz_focus
+		icon = GFX_goal_support_democracy
+		mutually_exclusive = { focus = PRC_zunyi_focus }
+		mutually_exclusive = { focus = zxdc_focus }
+		x = 5
+		y = 0
+		cost = 10
+		completion_reward = {
+			country_event = { id = political.13 }
+			add_political_power = 100
+			create_country_leader = {
+				name = "毛泽东"
+				desc = "POLITICS_MAO_ZEDONG_DESC"
+				picture = "gfx/leaders/CHI/Portrait_China_Mao_Zedong.dds"
+				expire = "1976.9.9"
+				ideology = liberalism
+				traits = {
+					prc_mzzy
+				}
+			}
+		}
+	}
+
+#########走向独裁
+	focus = {
+		id = zxdc_focus
+		icon = GFX_goal_support_fascism
+		mutually_exclusive = { focus = PRC_zunyi_focus }
+		mutually_exclusive = { focus = zxmz_focus }
+		x = 1
+		y = 0
+		cost = 10
+		completion_reward = {
+			country_event = political.7
+			add_political_power = 100
+			create_country_leader = {
+				name = "毛泽东"
+				desc = "POLITICS_MAO_ZEDONG_DESC"
+				picture = "gfx/leaders/CHI/Portrait_China_Mao_Zedong.dds"
+				expire = "1976.9.9"
+				ideology = nazism
+				traits = {
+					prc_fxszy
+				}
+			}
+		}
+	}
+	
+#########武装割据#########
+	focus = {
+		id = PRC_wuzhuang_focus
+		icon = GFX_goal_generic_military_sphere
+		x = 9
+		y = 0
+		cost = 10
+		completion_reward = {
+			army_experience = 30
+			add_manpower = 80000
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+				category = artillery
+			}
+		}
+	}
+
+#######第二次国共合作
+	focus = {
+		id = decgg_focus
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = PRC_zunyi_focus focus = zxmz_focus }
+		mutually_exclusive = { focus = ggjl_focus }
+		available = {
+			NOT = { has_war_with = CHI }
+			CHI = {
+				custom_trigger_tooltip = {
+					is_alone_or_in_faction_at_peace_with_RPC = yes
+				}
+			}
+		}
+		bypass = {
+			CHI = { is_in_faction_with = RPC }
+		}
+		cancel = {
+			OR = {
+				NOT = { country_exists = CHI }
+				has_war_with = CHI
+			}
+		}
+		cancel_if_invalid = no
+		x = 4
+		y = 1
+		cost = 10
+		completion_reward = {
+			remove_ideas = changzheng_idea
+			add_research_slot = 1
+			add_manpower = 100000
+			add_opinion_modifier = {
+					target = CHI
+					modifier = chi_prc_hezuo2_focus
+			}
+			CHI = {
+				remove_state_core = 283
+				remove_state_core = 604
+				remove_state_core = 608
+				remove_state_core = 609
+				remove_state_core = 614
+				remove_state_core = 615
+				remove_state_core = 616
+				remove_state_core = 621
+				remove_state_core = 622
+				add_opinion_modifier = {
+					target = PRC
+					modifier = chi_prc_hezuo2_focus
+				}
+			}			
+		}
+	}
+
+#######国共决裂
+	focus = {
+		id = ggjl_focus
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = PRC_zunyi_focus focus = zxdc_focus }
+		mutually_exclusive = { focus = decgg_focus }
+		available = {
+			NOT = { has_war_with = CHI }
+			CHI = {
+				custom_trigger_tooltip = {
+					is_alone_or_in_faction_at_peace_with_RPC = yes
+				}
+			}
+		}
+		bypass = {
+			CHI = { is_in_faction_with = RPC }
+		}
+		cancel_if_invalid = no
+		x = 2
+		y = 1
+		cost = 10
+		completion_reward = {
+			remove_ideas = changzheng_idea
+			add_manpower = 50000
+			add_opinion_modifier = {
+					target = CHI
+					modifier = chi_prc_juelie2_focus
+			}
+			CHI = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = chi_prc_juelie2_focus
+				}
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = CHI
+				generator = { 1 } 
+			}
+		}
+	}
+
+#######人民战争
+	focus = {
+		id = rmzz_focus
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = PRC_wuzhuang_focus }
+		bypass = {
+			RPC = { has_war_with = CHI }
+			}
+		x = 9
+		y = 1
+		cost = 10
+		completion_reward = {
+			army_experience = 30
+			add_manpower = 100000
+			add_ideas = xmjbq_idea
+				add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 3
+				category = infantry_weapons
+			}
+			
+		}
+	}
+
+#########重视工业
+	focus = {
+		id = gongye_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 13
+		y = 1
+		cost = 10
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+#########德国军事顾问
+	focus = {
+		id = dgjsgw_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		mutually_exclusive = { focus = lcjz_focus }
+		mutually_exclusive = { focus = usajsgw_focus }
+		prerequisite = { focus = zxdc_focus }
+		prerequisite = { focus = decgg_focus focus = ggjl_focus }
+		x = 1
+		y = 2
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = dgjsgw_focus_tt
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+#########论持久战
+	focus = {
+		id = lcjz_focus
+		icon = GFX_goal_generic_forceful_treaty
+		mutually_exclusive = { focus = dgjsgw_focus }
+		mutually_exclusive = { focus = usajsgw_focus }
+		#prerequisite = { focus = rmzz_focus }
+		prerequisite = { focus = decgg_focus focus = ggjl_focus }
+		x = 3
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_political_power = 100
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+#########美国军事顾问
+	focus = {
+		id = usajsgw_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		mutually_exclusive = { focus = lcjz_focus }
+		mutually_exclusive = { focus = dgjsgw_focus }
+		prerequisite = { focus = zxmz_focus }
+		prerequisite = { focus = decgg_focus focus = ggjl_focus }
+		x = 5
+		y = 2
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = usajsgw_focus_tt
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+#########一寸山河一寸血
+	focus = {
+		id = ycsh_focus
+		icon = GFX_goal_generic_demand_territory
+		#prerequisite = { focus = decgg_focus focus = ggjl_focus }
+		prerequisite = { focus = rmzz_focus }
+		x = 7
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = wzyx_idea
+			}
+		}
+	
+
+#########苏联航空志愿队
+	focus = {
+		id = hkzyd_focus
+		icon = GFX_goal_generic_air_fighter3
+		#prerequisite = { focus = decgg_focus focus = ggjl_focus }
+		prerequisite = { focus = rmzz_focus }
+		x = 9
+		y = 2
+		cost = 10
+		completion_reward = {
+			if = {
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+					
+			
+			PRC = {
+					country_event = { id = comchina.1 hours = 10 }
+				}
+			
+			air_experience = 50
+			
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_air
+				category = medium_air
+			}
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.4
+				uses = 1
+				category = electronics
+			}
+			add_ace = {
+				name = "cgue"
+				surname = "军座"
+				callsign = "塞班岛的雨燕"
+				type = fighter_god
+			}
+			622 = {
+					if = {
+						limit - { is_controlled_by = ROOT}
+						add_building_construction = {
+							type = air_base
+							level = 3
+							instant_build = yes
+						}
+					}
+			}
+			622 = {
+					if = {
+						limit - { is_controlled_by = ROOT}
+						add_building_construction = {
+							type = anti_air_building 
+							level = 2
+							instant_build = yes
+						}
+					}
+			}
+			622 = {
+					if = {
+						limit - { is_controlled_by = ROOT}
+						add_building_construction = {
+							type = Radar_station
+							level = 1
+							instant_build = yes
+						}
+					}
+			}
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.4
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+#########飞虎队
+	focus = {
+		id = feihudui_focus
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = mgjsyz_focus focus = zgqd_focus }
+		prerequisite = { focus = hkzyd_focus }
+		x = 9
+		y = 4
+		cost = 10
+		completion_reward = {
+			if = {
+				NOT = {
+					has_war_with = CHI
+				}
+			}
+					
+			
+			PRC = {
+					country_event = { id = comchina.2 days = 10 }
+				}
+			
+			air_experience = 50
+			
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				category = light_air
+				category = medium_air
+			}
+			add_ace = {
+				name = "刘粹刚"
+				surname = "少将"
+				callsign = "飞将军"
+				type = fighter_genius
+			}
+			622 = {
+					if = {
+						limit - { is_controlled_by = ROOT}
+						add_building_construction = {
+							type = air_base
+							level = 3
+							instant_build = yes
+						}
+					}
+			}
+			622 = {
+					if = {
+						limit - { is_controlled_by = ROOT}
+						add_building_construction = {
+							type = anti_air_building 
+							level = 2
+							instant_build = yes
+						}
+					}
+			}
+			622 = {
+					if = {
+						limit - { is_controlled_by = ROOT}
+						add_building_construction = {
+							type = Radar_station
+							level = 1
+							instant_build = yes
+						}
+					}
+			}
+		}
+	}
+
+#########大生产
+	focus = {
+		id = dsc_focus
+		icon = GFX_goal_generic_construction2
+		#prerequisite = { focus = rmzz_focus }
+		prerequisite = { focus = gongye_focus }
+		x = 13
+		y = 2
+		cost = 10
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+			}			
+		}
+		completion_reward = {
+			add_ideas = jmgj_idea	
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}
+		}
+	}
+	
+
+#########德国军事援助
+	focus = {
+		id = dgjsyz_focus
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = dgjsgw_focus }
+		x = 1
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				add_research_slot = 1
+				name = armor_bonus
+				bonus = 0.6
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	
+#########中共七大
+	focus = {
+		id = zgqd_focus
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = lcjz_focus }
+		x = 3
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+			add_political_power = 200
+			add_ideas = lmao_idea
+		}
+	}
+
+#########美国军事援助
+	focus = {
+		id = mgjsyz_focus
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = usajsgw_focus }
+		x = 5
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.6
+				uses = 2
+				category = medium_air
+				category = heavy_air
+			}
+		}
+	}
+		
+	
+
+#########十万青年十万军
+	focus = {
+		id = swqn_focus
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = ycsh_focus }
+		x = 7
+		y = 3
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = swqn_focus_tt
+			hidden_effect = {
+				load_oob = "PRC_100000"
+			}
+		}
+	}
+	
+
+
+#########土地改革
+	focus = {
+		id = tdgg_focus
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = dsc_focus }
+		x = 13
+		y = 3
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = tdgg_focus_tt
+			hidden_effect = {
+				622 = {
+					if = {
+						limit = { is_controlled_by = ROOT}
+						add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+					}
+				}
+			}
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 25
+			}
+		}
+	}
+	
+#########新式整军
+	focus = {
+		id = xszj_focus
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = zgqd_focus focus = dgjsyz_focus focus = mgjsyz_focus }
+		prerequisite = { focus = swqn_focus }
+		x = 5
+		y = 4
+		cost = 12
+		completion_reward = {
+			add_manpower = -10000
+			remove_ideas = wzyx_idea
+			add_ideas = balujun_idea
+			
+			set_technology = {
+				mobile_warfare = 1		#运动战
+				superior_firepower = 1	#优势火力
+				trench_warfare = 1		#堑壕战
+			}
+		}
+	}
+
+#########社会主义改造
+	focus = {
+		id = shzygz_focus
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = tdgg_focus }
+		#prerequisite = { focus = zgqd_focus focus = mgjsyz_focus focus = dgjsyz_focus }
+		prerequisite = { focus = hkzyd_focus }
+		x = 12
+		y = 4
+		cost = 10
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 8
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+			
+#########重视基建
+	focus = {
+		id = zsjj_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = tdgg_focus }
+		x = 14
+		y = 4
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = tdgg_focus_tt
+			hidden_effect = {
+				622 = {
+					if = {
+						limit = { is_controlled_by = ROOT}
+						add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+					}
+				}
+			}
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 25
+			}
+		}
+		
+	}
+	
+	
+#########海岸线
+	focus = {
+		id = hax_focus
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = xszj_focus }
+		x = 1
+		y = 5
+		cost = 10
+		
+		
+
+		completion_reward = {
+			transfer_state = 608
+			#transfer_state = 609
+			transfer_state = 614
+			#transfer_state = 615
+			transfer_state = 597
+			transfer_state = 743
+			transfer_state = 607
+			transfer_state = 744
+		}
+	}
+		
+#########缓兵之计
+	focus = {
+		id = hbzj_focus
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = xszj_focus }
+		#prerequisite = { focus = shzygz_focus }
+		mutually_exclusive = { focus = djz_focus }
+		x = 4
+		y = 5
+		cost = 12
+		completion_reward = {
+			country_event = comchina.6
+			create_wargoal = {
+					type = take_state_focus
+					target = CHI
+					generator = { 1 }
+			}
+			if = { 
+				limit = { 
+					NOT = { SIK = { is_in_faction_with = PRC } }
+					country_exists = SIK
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = SIK
+					generator = { 0 }
+				}
+			}
+			if = { 
+				limit = { 
+					NOT = { TIB = { is_in_faction_with = PRC } }
+					country_exists = TIB
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = TIB
+					generator = { 0 }
+				}
+			}
+			remove_opinion_modifier = {
+					target = CHI
+					modifier = chi_prc_hezuo2_focus
+			}
+		}
+	}
+	
+#########大决战
+	focus = {
+		id = djz_focus
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = xszj_focus }
+		#prerequisite = { focus = shzygz_focus }
+		mutually_exclusive = { focus = hbzj_focus }
+		x = 6
+		y = 5
+		cost = 10
+		completion_reward = {
+			country_event = comchina.5
+			if = { 
+				limit = { 
+					NOT = { CHI = { is_in_faction_with = PRC } }
+					country_exists = CHI
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = CHI
+					generator = { 10 }
+				}
+			}
+			if = { 
+				limit = { 
+					NOT = { SIK = { is_in_faction_with = PRC } }
+					country_exists = SIK
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = SIK
+					generator = { 0 }
+				}
+			}
+			if = { 
+				limit = { 
+					NOT = { TIB = { is_in_faction_with = PRC } }
+					country_exists = TIB
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = TIB
+					generator = { 0 }
+				}
+			}
+			remove_opinion_modifier = {
+					target = CHI
+					modifier = chi_prc_hezuo2_focus
+			}
+			CHI = {
+				remove_opinion_modifier = {
+					target = PRC
+					modifier = chi_prc_hezuo2_focus
+				}
+			}
+		}
+	}
+		
+#########逆向工程
+	focus = {
+		id = nxgc_focus
+		icon = GFX_goal_generic_production
+		#prerequisite = { focus = shzygz_focus }
+		prerequisite = { focus = shzygz_focus focus = feihudui_focus focus = xszj_focus }
+		x = 9
+		y = 5
+		cost = 12
+		completion_reward = {
+			add_ideas = nxgc_idea
+			
+			}
+		}
+
+#########苏联援助
+	focus = {
+		id = slyz_focus
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = shzygz_focus }
+		#prerequisite = { focus = xszj_focus }
+		x = 12
+		y = 5
+		cost = 10
+		completion_reward = {
+			#add_research_slot = 1
+			add_research_slot = 4
+		}
+	}
+
+#########重视补给
+	focus = {
+		id = zsbj_focus
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = zsjj_focus }
+		#prerequisite = { focus = xszj_focus }
+		x = 14
+		y = 5
+		cost = 10
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 10
+				instant_build = yes
+			}			
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+				
+				add_resource = {
+					type = rubber
+					amount = 80
+				}
+				add_resource = {
+					type = oil
+					amount = 80
+				}
+				add_resource = {
+					type = aluminium
+					amount = 80
+				}
+				add_resource = {
+					type = tungsten
+					amount = 80
+				}
+				add_resource = {
+					type = steel
+					amount = 80
+				}
+				add_resource = {
+					type = chromium
+					amount = 80
+				}
+			}
+		}
+	}
+
+#########海军
+	focus = {
+		id = xzghj_focus
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = hax_focus }
+		prerequisite = { focus = djz_focus focus = hbzj_focus }
+		#prerequisite = { focus = nxgc_focus }
+		#prerequisite = { focus = slyz_focus }
+		x = 1
+		y = 6
+		cost = 13
+		completion_reward = {
+			country_event = { id = comchina.3 days = 180 }
+			add_ideas = dgzq_idea
+			navy_experience = 200
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.2
+				uses = 4
+				category = naval_doctrine
+			}
+		}
+	}
+
+#########陆军
+	focus = {
+		id = xzgjd_focus
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = djz_focus focus = hbzj_focus }
+		#prerequisite = { focus = nxgc_focus }
+		#prerequisite = { focus = slyz_focus }
+		x = 5
+		y = 6
+		cost = 13
+		completion_reward = {
+			add_ideas = jfj_idea
+			remove_ideas = balujun_idea
+			army_experience = 200
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.2
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+#########空军
+	focus = {
+		id = xzgkj_focus
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = djz_focus focus = hbzj_focus }
+		prerequisite = { focus = nxgc_focus }
+		#prerequisite = { focus = slyz_focus }
+		x = 9
+		y = 6
+		cost = 13
+		completion_reward = {
+			add_ideas = zzly_idea
+			air_experience = 200
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.2
+				uses = 4
+				category = air_doctrine
+			}
+		}
+	}
+
+#########人民公社
+	focus = {
+		id = rmgs_focus
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = slyz_focus  }
+		#prerequisite = { focus = djz_focus focus = hbzj_focus }
+		x = 12
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_ideas = rmgs_idea
+			
+			}
+		}
+
+#########兵马未动粮草先行
+	focus = {
+		id = bmwd_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = zsbj_focus }
+		x = 14
+		y = 6
+		cost = 10
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 10
+				instant_build = yes
+			}			
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+				
+				add_resource = {
+					type = rubber
+					amount = 80
+				}
+				add_resource = {
+					type = oil
+					amount = 80
+				}
+				add_resource = {
+					type = aluminium
+					amount = 80
+				}
+				add_resource = {
+					type = tungsten
+					amount = 80
+				}
+				add_resource = {
+					type = steel
+					amount = 80
+				}
+				add_resource = {
+					type = chromium
+					amount = 80
+				}
+			}
+		}
+	}
+	
+#########主力舰
+	focus = {
+		id = zlj_focus
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = xzghj_focus }
+		mutually_exclusive = { focus = hkmj_focus }
+		x = 0
+		y = 7
+		cost = 15
+		completion_reward = {
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = ship_bonus
+				bonus = 0.15
+				uses = 3
+				category = bc_tech
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
+
+#########航空母舰
+	focus = {
+		id = hkmj_focus
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = xzghj_focus }
+		mutually_exclusive = { focus = zlj_focus }
+		x = 2
+		y = 7
+		cost = 15
+		completion_reward = {
+			add_tech_bonus = {
+				name = navy_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = navy_air_bonus
+				bonus = 0.15
+				uses = 3
+				category = cv_tech
+				category = naval_air
+			}
+		}
+	}
+
+#########装甲
+	focus = {
+		id = zszj_focus
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = xzgjd_focus }
+		mutually_exclusive = { focus = zshp_focus }
+		x = 4
+		y = 7
+		cost = 15
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.15
+				uses = 4
+				category = armor
+			}
+		}
+	}
+
+#########火炮
+	focus = {
+		id = zshp_focus
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = xzgjd_focus }
+		mutually_exclusive = { focus = zszj_focus }
+		x = 6
+		y = 7
+		cost = 15
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.15
+				uses = 3
+				category = artillery
+			}
+		}
+	}
+
+#########战斗机
+	focus = {
+		id = zszdj_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = xzgkj_focus }
+		mutually_exclusive = { focus = zshzj_focus }
+		x = 8
+		y = 7
+		cost = 15
+		completion_reward = {
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.15
+				uses = 4
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+#########轰炸机
+	focus = {
+		id = zshzj_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = xzgkj_focus }
+		mutually_exclusive = { focus = zszdj_focus }
+		x = 10
+		y = 7
+		cost = 15
+		completion_reward = {
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.15
+				uses = 4
+				category = cat_strategic_bomber
+				category = tactical_bomber
+				category = cas_bomber
+			}
+		}
+	}
+
+#########大跃进
+	focus = {
+		id = dyj_focus
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = rmgs_focus }
+		x = 12
+		y = 7
+		cost = 10
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 8
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.2
+				uses = 3
+				category = industry
+			}
+		
+		}
+	}
+
+	
+#########现代补给
+	focus = {
+		id = xdbj_focus
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = bmwd_focus }
+		prerequisite = { focus = xzgkj_focus }
+		x = 14
+		y = 7
+		cost = 12
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 10
+				instant_build = yes
+			}			
+		}
+		completion_reward = {
+			remove_ideas = xmjbq_idea
+			add_ideas = xdbj_idea
+			set_technology = {
+				transport_plane2 = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+				
+				add_resource = {
+					type = rubber
+					amount = 80
+				}
+				add_resource = {
+					type = oil
+					amount = 80
+				}
+				add_resource = {
+					type = aluminium
+					amount = 80
+				}
+				add_resource = {
+					type = tungsten
+					amount = 80
+				}
+				add_resource = {
+					type = steel
+					amount = 80
+				}
+				add_resource = {
+					type = chromium
+					amount = 80
+				}
+			}
+		}
+	}
+
+#########潜艇
+	focus = {
+		id = zsqt_focus
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = zlj_focus focus = hkmj_focus }
+		x = 0
+		y = 8
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = ship_bonus
+				bonus = 0.15
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+#########护卫舰
+	focus = {
+		id = zshwj_focus
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = zlj_focus focus = hkmj_focus }
+		x = 2
+		y = 8
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = ship_bonus
+				bonus = 0.15
+				uses = 4
+				category = dd_tech
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+#########机械化
+	focus = {
+		id = zsjxh_focus
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = zszj_focus focus = zshp_focus }
+		x = 4
+		y = 8
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.15
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}
+
+#########特种
+	focus = {
+		id = zstz_focus
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = zszj_focus focus = zshp_focus }
+		x = 6
+		y = 8
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_bonus
+				bonus = 0.15
+				uses = 4
+				technology = paratroopers
+				technology = paratroopers2
+				technology = paratroopers3
+				technology = marines
+				technology = marines2
+				technology = marines3
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+			}
+		}
+	}
+
+#########火箭
+	focus = {
+		id = zshj_focus
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = zszdj_focus focus = zshzj_focus }
+		x = 8
+		y = 8
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.15
+				uses = 7
+				category = rocketry
+				category = jet_technology
+			}
+		}
+	}
+
+#########航电
+	focus = {
+		id = zshd_focus
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = zszdj_focus focus = zshzj_focus }
+		x = 10
+		y = 8
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.15
+				uses = 6
+				category = electronics
+			}
+		}
+	}
+
+#########赶英超美
+	focus = {
+		id = gycm_focus
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = dyj_focus }
+		x = 12
+		y = 8
+		cost = 15
+		completion_reward = {
+			remove_ideas = jmgj_idea
+			add_ideas = gycm_idea
+		}
+	}
+
+#########两弹一星
+	focus = {
+		id = ldyx_focus
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = dyj_focus }
+		x = 14
+		y = 8
+		cost = 15
+		completion_reward = {
+			add_ideas = hpzy_idea
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 0.5
+				uses = 2
+				bonus = 0.2
+				category = nuclear
+			}
+		}
+	}
+
+#########协同作战
+	focus = {
+		id = xtzz_focus
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = zsqt_focus }
+		prerequisite = { focus = zshwj_focus }
+		prerequisite = { focus = zsjxh_focus }
+		prerequisite = { focus = zstz_focus }
+		prerequisite = { focus = zshj_focus }
+		prerequisite = { focus = zshd_focus }
+		x = 5
+		y = 9
+		cost = 20
+		completion_reward = {
+			remove_ideas = jfj_idea
+			remove_ideas = dgzq_idea
+			remove_ideas = zzly_idea
+			add_ideas = xdzz_idea
+			
+			}
+		}
+
+#########九评苏修
+	focus = {
+		id = jpsg_focus
+		icon = GFX_goal_anti_comintern_pact
+		mutually_exclusive = { focus = zsyy_focus }
+		prerequisite = { focus = gycm_focus }
+		x = 9
+		y = 9
+		cost = 10
+		completion_reward = {
+			add_opinion_modifier = {
+					target = SOV
+					modifier = sov_prc_didui_focus
+			}
+			SOV = { 
+				add_opinion_modifier = {
+					target = PRC
+					modifier = sov_prc_didui_focus
+				}
+			}
+		}
+	}
+
+#########中苏友谊
+	focus = {
+		id = zsyy_focus
+		icon = GFX_goal_zsyy_focus
+		mutually_exclusive = { focus = zmyy_focus }
+		mutually_exclusive = { focus = jpsg_focus }
+		prerequisite = { focus = gycm_focus }
+		x = 11
+		y = 9
+		cost = 10
+		completion_reward = {
+			add_opinion_modifier = {
+					target = SOV
+					modifier = sov_prc_youyi_focus
+			}
+			SOV = { 
+				add_opinion_modifier = {
+					target = PRC
+					modifier = sov_prc_youyi_focus
+				}
+			}
+		}
+	}
+
+#########中美友谊
+	focus = {
+		id = zmyy_focus
+		icon = GFX_goal_zmyy_focus
+		mutually_exclusive = { focus = zsyy_focus }
+		mutually_exclusive = { focus = zmdd_focus }
+		prerequisite = { focus = gycm_focus }
+		x = 13
+		y = 9
+		cost = 10
+		completion_reward = {
+			add_opinion_modifier = {
+					target = USA
+					modifier = usa_prc_youyi_focus
+			}
+			USA = { 
+				add_opinion_modifier = {
+					target = PRC
+					modifier = usa_prc_youyi_focus
+				}
+			}
+		}
+	}
+
+#########中美敌对
+	focus = {
+		id = zmdd_focus
+		icon = GFX_goal_generic_political_pressure
+		mutually_exclusive = { focus = zmyy_focus }
+		prerequisite = { focus = gycm_focus }
+		x = 15
+		y = 9
+		cost = 10
+		completion_reward = {
+			add_opinion_modifier = {
+					target = USA
+					modifier = usa_prc_didui_focus
+			}
+			USA = { 
+				add_opinion_modifier = {
+					target = PRC
+					modifier = usa_prc_didui_focus
+				}
+			}
+		}
+	}
+
+#########打倒苏修
+	focus = {
+		id = ddsxzy_focus
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = jpsg_focus }
+		x = 9
+		y = 10
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+					type = take_state_focus
+					target = SOV
+					generator = { 100 }
+				}
+		}
+	}
+
+#########五年计划
+	focus = {
+		id = wnjh_focus
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = zsyy_focus }
+		x = 11
+		y = 10
+		cost = 20
+		completion_reward = {
+			remove_ideas = gycm_idea
+			add_ideas = wnjh_idea
+		}
+	}
+
+#########标准化生产
+	focus = {
+		id = bzhsc_focus
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = zmyy_focus }
+		x = 13
+		y = 10
+		cost = 20
+		completion_reward = {
+			remove_ideas = gycm_idea
+			add_ideas = bzhsc_idea
+			
+		}
+	}
+
+#########打倒帝国主义
+	focus = {
+		id = dddgzy_focus
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = zmdd_focus }
+		x = 15
+		y = 10
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+					type = take_state_focus
+					target = USA
+					generator = { 100 }
+				}
+		}
+	}
+
+#########改革开放
+	focus = {
+		id = ggkf_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = dddgzy_focus focus = bzhsc_focus focus = wnjh_focus focus = ddsxzy_focus }
+		x = 12
+		y = 11
+		cost = 20
+		completion_reward = {
+			add_ideas = ggkf_idea
+			
+			}
+		}
+		
+#########建立新中国
+	focus = {
+		id = jlxzg_focus
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
+		prerequisite = { focus = zgqd_focus focus = dgjsyz_focus focus = mgjsyz_focus }
+		x = 3
+		y = 4
+		cost = 10
+
+		available = {
+			controls_state = 608
+			controls_state = 613
+			controls_state = 605
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = PRC_proclaimed
+			hidden_effect = {
+				news_event = { id = wtt_news.37 days = 3 random = 72 }
+			}
+		}
+	}

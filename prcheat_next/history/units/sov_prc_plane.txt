@@ -1,0 +1,60 @@
+﻿# 苏联航空志愿队
+division_template = {
+	name = "苏联援助步兵师"			# Binary Infantry Corps
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+   		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+  		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	
+	priority = 0 #后备
+}
+
+units = {
+
+	division = {
+		name = "苏联援助步兵1师"
+		location = 8049
+		division_template = "苏联援助步兵师"
+	}
+	division = {
+		name = "苏联援助步兵2师"
+		location = 8049
+		division_template = "苏联援助步兵师"
+	}
+	division = {
+		name = "苏联援助步兵3师"
+		location = 8049
+		division_template = "苏联援助步兵师"
+	}
+	division = {
+		name = "苏联援助步兵4师"
+		location = 8049
+		division_template = "苏联援助步兵师"
+	}
+	division = {
+		name = "苏联援助步兵5师"
+		location = 8049
+		division_template = "苏联援助步兵师"
+	}
+}
+
+air_wings = {
+	622 = {
+		fighter_equipment_1 = { owner = "PRC" amount = 100 creator = SOV }
+		CAS_equipment_1 =  { owner = "PRC" amount = 100 creator = SOV }	
+	}
+}
+
+					

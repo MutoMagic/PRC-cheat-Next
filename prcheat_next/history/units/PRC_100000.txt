@@ -1,0 +1,78 @@
+﻿# 十万青年十万军
+division_template = {
+	name = "征召青年军"			
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+   		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+  		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	
+	priority = 0 #后备
+}
+
+units = {
+
+	division = {
+		name = "征召青年军1师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+	division = {
+		name = "征召青年军2师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+	division = {
+		name = "征召青年军3师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+	division = {
+		name = "征召青年军4师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+	division = {
+		name = "征召青年军5师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+	division = {
+		name = "征召青年军6师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+	division = {
+		name = "征召青年军7师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+	division = {
+		name = "征召青年军8师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+	division = {
+		name = "征召青年军9师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+	division = {
+		name = "征召青年军10师"
+		location = 8049
+		division_template = "征召青年军"
+	}
+}
+
+					

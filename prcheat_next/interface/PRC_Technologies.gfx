@@ -1,0 +1,519 @@
+spriteTypes = {	
+
+	### generic equipment tech ###
+
+	SpriteType = {
+		name = "GFX_motorized_rocket_unit2_medium"
+		texturefile = "gfx/interface/technologies/motorized_rocket_unit_2.dds"
+	}	
+	
+	
+	SpriteType = {
+		name = "GFX_mechanised_infantry4_medium"
+		texturefile = "gfx/interface/technologies/mechanized_equipment_4.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_infantry_at3_medium"
+		texturefile = "gfx/interface/technologies/infantry_at2.dds"
+	}	
+	
+	### NAVAL TECH ###
+
+	SpriteType = {
+		name = "GFX_super_carrier_medium"
+		texturefile = "gfx/interface/technologies/semi_modern_carrier.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_heavy_battleship3_medium"
+		texturefile = "gfx/interface/technologies/heavy_battleship3.dds"
+	}	
+	
+	### PRC infantry ###
+	
+	SpriteType = {
+		name = "GFX_PRC_motorized_rocket_unit2_medium"
+		texturefile = "gfx/interface/technologies/PRC_motorized_rocket_unit_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_insane_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/PRC_infantry_equipment_4.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_extra_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/PRC_infantry_equipment_5.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_tech_medium"
+		texturefile = "gfx/interface/technologies/PRC_TECH.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_gundam1_medium"
+		texturefile = "gfx/interface/technologies/PRC_gundam.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/PRC_jiefang141.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_mechanised_infantry4_medium"
+		texturefile = "gfx/interface/technologies/PRC_mechanized_equipment_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/PRC_mechanized_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/PRC_mechanized_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/PRC_mechanized_equipment_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_infantry3_medium"
+		texturefile = "gfx/interface/technologies/PRC_infantry_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_infantry2_medium"
+		texturefile = "gfx/interface/technologies/PRC_infantry_equipment_2.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_PRC_infantry1_medium"
+		texturefile = "gfx/interface/technologies/PRC_infantry_equipment_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PRC_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/PRC_infantry_equipment_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/PRC_infantry_equipment_2.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_PRC_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/PRC_infantry_equipment_1.dds"
+	}
+	
+
+	SpriteType = {
+		name = "GFX_extra_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_5.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_insane_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_4.dds"
+	}
+	
+	### PRC Aircrafts ###
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/PRC_gen6_bomber.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/PRC_gen5_bomber.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_cv_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/PRC_jet_cv_fighter.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/PRC_J-11.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_jet_cv_nav_bomber1_medium"
+		texturefile = "gfx/interface/technologies/jet_cv_CAS.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_jet_cv_nav_bomber2_medium"
+		texturefile = "gfx/interface/technologies/jet_cv_CAS.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_jet_CAS2_medium"
+		texturefile = "gfx/interface/technologies/jet_CAS2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_jet_CAS1_medium"
+		texturefile = "gfx/interface/technologies/jet_CAS1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_CAS2_medium"
+		texturefile = "gfx/interface/technologies/PRC_jet_CAS2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_CAS1_medium"
+		texturefile = "gfx/interface/technologies/PRC_jet_CAS1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_cv_nav_bomber1_medium"
+		texturefile = "gfx/interface/technologies/PRC_jet_cv_CAS.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_cv_nav_bomber2_medium"
+		texturefile = "gfx/interface/technologies/PRC_jet_cv_CAS.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/PRC_J-20.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_fighter3_medium"
+		texturefile = "gfx/interface/technologies/PRC_J-10.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_fighter4_medium"
+		texturefile = "gfx/interface/technologies/PRC_FC-31.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_cv_fighter1_medium"
+		texturefile = "gfx/interface/technologies/PRC_jet_cv_fighter.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_cv_fighter2_medium"
+		texturefile = "gfx/interface/technologies/PRC_jet_cv_fighter.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_early_bomber_medium"
+		texturefile = "gfx/interface/technologies/SOV_early_bomber.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_cv_fighter1_medium"
+		texturefile = "gfx/interface/technologies/SOV_early_fighter.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_cv_fighter2_medium"
+		texturefile = "gfx/interface/technologies/USA_fighter2_cv.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_cv_fighter3_medium"
+		texturefile = "gfx/interface/technologies/USA_fighter3_cv.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/SOV_tactical_bomber2.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_PRC_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/USA_tactical_bomber2.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_PRC_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/USA_tactical_bomber3.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_PRC_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/SOV_strategic_bomber1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/USA_strategic_bomber1.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_PRC_strategic_bomber3_medium"
+		texturefile = "gfx/interface/technologies/SOV_strategic_bomber3.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_PRC_CAS1_medium"
+		texturefile = "gfx/interface/technologies/SOV_CAS1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_cv_CAS1_medium"
+		texturefile = "gfx/interface/technologies/USA_CAS1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_cv_CAS2_medium"
+		texturefile = "gfx/interface/technologies/USA_CAS2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_cv_CAS3_medium"
+		texturefile = "gfx/interface/technologies/USA_CAS3.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_CAS2_medium"
+		texturefile = "gfx/interface/technologies/SOV_CAS2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_CAS3_medium"
+		texturefile = "gfx/interface/technologies/SOV_CAS3.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_PRC_heavy_fighter3_medium"
+		texturefile = "gfx/interface/technologies/SOV_heavy_fighter3.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/SOV_heavy_fighter2.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_PRC_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/SOV_heavy_fighter1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_fighter3_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter3.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_fighter2_medium"
+		texturefile = "gfx/interface/technologies/USA_fighter1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_fighter1_medium"
+		texturefile = "gfx/interface/technologies/SOV_fighter1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/usa_naval_bomber_1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/usa_naval_bomber_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/usa_naval_bomber_3.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/SOV_early_fighter.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_fighter2_medium"
+		texturefile = "gfx/interface/technologies/PRC_J_7.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_PRC_jet_fighter1_medium"
+		texturefile = "gfx/interface/technologies/PRC_J_5.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_strategic_bomber1_medium"
+		texturefile = "gfx/interface/technologies/PRC_M_4.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_PRC_jet_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/PRC_TU_16.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_jet_tactical_bomber1_medium"
+		texturefile = "gfx/interface/technologies/PRC_il_28.dds"
+	}	
+	
+	### PRC tanks ####
+	
+	SpriteType = {
+		name = "GFX_imp_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/imp_main_battle_tank.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_adv_modern_spaa_medium"
+		texturefile = "gfx/interface/technologies/PRC_adv_modern_spaa.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_adv_modern_art_medium"
+		texturefile = "gfx/interface/technologies/PRC_adv_modern_art.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_adv_modern_td_medium"
+		texturefile = "gfx/interface/technologies/PRC_adv_modern_td.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_imp_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/PRC_88MT.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_adv_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/adv_main_battle_tank.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_adv_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/PRC_96MT.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_main_battle_tank.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/USA_basic_light_tank.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PRC_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/USA_imp_light_tank.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_PRC_gwtank_medium"
+		texturefile = "gfx/interface/technologies/gwtank.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_adv_light_tank.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/USA_imp_main_tank.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_imp_main_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_adv_main_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_basic_heavy_tank.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PRC_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_adv_heavy_tank.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_is-2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PRC_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/SOV_superheavy_tank.dds"
+	}
+	
+	### Generic Tanks	###	
+
+	### Generic Aircrafts ###	
+
+	SpriteType = {
+		name = "GFX_jet_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/jet_heavy_fighter1.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_jet_heavy_fighter2_medium"
+		texturefile = "gfx/interface/technologies/jet_heavy_fighter2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_jet_fighter3_medium"
+		texturefile = "gfx/interface/technologies/jet_fighter3.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_jet_fighter4_medium"
+		texturefile = "gfx/interface/technologies/jet_fighter4.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_jet_cv_fighter1_medium"
+		texturefile = "gfx/interface/technologies/jet_cv_fighter.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_jet_cv_fighter2_medium"
+		texturefile = "gfx/interface/technologies/jet_cv_fighter.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_jet_cv_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/jet_cv_fighter.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_jet_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/gen5_bomber.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_jet_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/gen6_bomber.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_transport_plane2_medium"
+		texturefile = "gfx/interface/technologies/AST_gen3_bomber.dds"
+	}
+	
+}
