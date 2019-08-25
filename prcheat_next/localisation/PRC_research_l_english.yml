@@ -125,6 +125,7 @@
  jet_cv_fighter_equipment_desc:0 "舰载喷气式战斗机可以执行战斗机和海军轰炸机任务，新时代的技术让他效果拔群"
  jet_heavy_fighter_equipment_desc:0 "重型喷气式战斗机可以执行战斗机和CAS任务，无人可及的速度和巨大的载弹量让他成为空中霸主"
  
+ cv_jet_heavy_fighter:0 "舰载重型喷气战斗机"
  jet_cv_heavy_fighter_equipment:0 "舰载重型喷气战斗机"
  jet_cv_heavy_fighter_equipment_desc:0 "舰载重型喷气式战斗机可以执行战斗机和海军轰炸机任务，遥不可及的航程和巨大的载弹量足以让它成为海上空中霸主"
  jet_cv_heavy_fighter_equipment_1:0 "舰载重型喷气式战斗机Ⅰ型"
@@ -132,7 +133,6 @@
  PRC_jet_cv_heavy_fighter_equipment_1:0 "J-15舰载重型喷气式战斗机"
  PRC_jet_cv_heavy_fighter_equipment_1_short:0 "J-15飞鲨"
  PRC_jet_cv_heavy_fighter_equipment_1_desc:0 "歼-15（英文：J-15，中文绰号：飞鲨“Fēishā”，英文：Flying Shark，北约代号：侧卫D型，英文：Flanker-D）是中国参考从乌克兰获得苏-33战斗机原型机T-10K-3以国产歼-11战斗机为基础进而研制和发展的单座双发舰载战斗机。歼-15研制由中国航空工业集团公司沈阳飞机工业集团承担。歼-15在世代划分上属于第四代战斗机改进型，即第四代半战斗机。"
- cv_jet_heavy_fighter:0 "舰载重型喷气战斗机"
  jet_cv_heavy_fighter1:0 "舰载重型喷气式战斗机Ⅰ型"
  jet_tac_bomber_equipment_3:0 "战术轰炸机Ⅲ型"
  jet_tac_bomber_equipment_3_desc: "新型战术轰炸机在原有的基础上提高了航程和载弹量"

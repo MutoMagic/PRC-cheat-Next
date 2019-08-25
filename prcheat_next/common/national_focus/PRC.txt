@@ -833,6 +833,7 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { SIK = { is_in_faction_with = PRC } }
+					country_exists = SIK
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -843,6 +844,7 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { TIB = { is_in_faction_with = PRC } }
+					country_exists = TIB
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -872,6 +874,7 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { CHI = { is_in_faction_with = PRC } }
+					country_exists = CHI
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -882,6 +885,7 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { SIK = { is_in_faction_with = PRC } }
+					country_exists = SIK
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -892,6 +896,7 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { TIB = { is_in_faction_with = PRC } }
+					country_exists = TIB
 				}
 				create_wargoal = {
 					type = take_state_focus
