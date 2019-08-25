@@ -17,8 +17,7 @@ division_template = {
 		engineer = { x = 0 y = 0 }
 		artillery = { x = 0 y = 1 }
 	}
-	
-	priority = 0 #后备
+	priority = 0	#后备役
 }
 
 units = {

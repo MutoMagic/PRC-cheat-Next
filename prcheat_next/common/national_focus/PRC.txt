@@ -304,7 +304,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		mutually_exclusive = { focus = dgjsgw_focus }
 		mutually_exclusive = { focus = usajsgw_focus }
-		#prerequisite = { focus = rmzz_focus }
+		prerequisite = { focus = rmzz_focus }
 		prerequisite = { focus = decgg_focus focus = ggjl_focus }
 		x = 3
 		y = 2
@@ -346,7 +346,7 @@ focus_tree = {
 	focus = {
 		id = ycsh_focus
 		icon = GFX_goal_generic_demand_territory
-		#prerequisite = { focus = decgg_focus focus = ggjl_focus }
+		prerequisite = { focus = decgg_focus focus = ggjl_focus }
 		prerequisite = { focus = rmzz_focus }
 		x = 7
 		y = 2
@@ -361,7 +361,7 @@ focus_tree = {
 	focus = {
 		id = hkzyd_focus
 		icon = GFX_goal_generic_air_fighter3
-		#prerequisite = { focus = decgg_focus focus = ggjl_focus }
+		prerequisite = { focus = decgg_focus focus = ggjl_focus }
 		prerequisite = { focus = rmzz_focus }
 		x = 9
 		y = 2
@@ -511,7 +511,7 @@ focus_tree = {
 	focus = {
 		id = dsc_focus
 		icon = GFX_goal_generic_construction2
-		#prerequisite = { focus = rmzz_focus }
+		prerequisite = { focus = rmzz_focus }
 		prerequisite = { focus = gongye_focus }
 		x = 13
 		y = 2
@@ -578,7 +578,7 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 			add_tech_bonus = {
-				add_research_slot = 1
+				#add_research_slot = 1
 				name = armor_bonus
 				bonus = 0.6
 				uses = 2
@@ -664,9 +664,6 @@ focus_tree = {
 					}
 				}
 			}
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 25
-			}
 		}
 	}
 	
@@ -683,22 +680,15 @@ focus_tree = {
 			add_manpower = -10000
 			remove_ideas = wzyx_idea
 			add_ideas = balujun_idea
-			
-			set_technology = {
-				mobile_warfare = 1		#运动战
-				superior_firepower = 1	#优势火力
-				trench_warfare = 1		#堑壕战
 			}
 		}
-	}
 
 #########社会主义改造
 	focus = {
 		id = shzygz_focus
 		icon = GFX_goal_generic_soviet_construction
 		prerequisite = { focus = tdgg_focus }
-		#prerequisite = { focus = zgqd_focus focus = mgjsyz_focus focus = dgjsyz_focus }
-		prerequisite = { focus = hkzyd_focus }
+		prerequisite = { focus = zgqd_focus focus = mgjsyz_focus focus = dgjsyz_focus }
 		x = 12
 		y = 4
 		cost = 10
@@ -799,9 +789,6 @@ focus_tree = {
 					}
 				}
 			}
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 25
-			}
 		}
 		
 	}
@@ -820,13 +807,9 @@ focus_tree = {
 
 		completion_reward = {
 			transfer_state = 608
-			#transfer_state = 609
+			transfer_state = 609
 			transfer_state = 614
-			#transfer_state = 615
-			transfer_state = 597
-			transfer_state = 743
-			transfer_state = 607
-			transfer_state = 744
+			transfer_state = 615
 		}
 	}
 		
@@ -835,7 +818,7 @@ focus_tree = {
 		id = hbzj_focus
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = xszj_focus }
-		#prerequisite = { focus = shzygz_focus }
+		prerequisite = { focus = shzygz_focus }
 		mutually_exclusive = { focus = djz_focus }
 		x = 4
 		y = 5
@@ -850,7 +833,6 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { SIK = { is_in_faction_with = PRC } }
-					country_exists = SIK
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -861,7 +843,6 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { TIB = { is_in_faction_with = PRC } }
-					country_exists = TIB
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -881,7 +862,7 @@ focus_tree = {
 		id = djz_focus
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = xszj_focus }
-		#prerequisite = { focus = shzygz_focus }
+		prerequisite = { focus = shzygz_focus }
 		mutually_exclusive = { focus = hbzj_focus }
 		x = 6
 		y = 5
@@ -891,7 +872,6 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { CHI = { is_in_faction_with = PRC } }
-					country_exists = CHI
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -902,7 +882,6 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { SIK = { is_in_faction_with = PRC } }
-					country_exists = SIK
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -913,7 +892,6 @@ focus_tree = {
 			if = { 
 				limit = { 
 					NOT = { TIB = { is_in_faction_with = PRC } }
-					country_exists = TIB
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -938,8 +916,7 @@ focus_tree = {
 	focus = {
 		id = nxgc_focus
 		icon = GFX_goal_generic_production
-		#prerequisite = { focus = shzygz_focus }
-		prerequisite = { focus = shzygz_focus focus = feihudui_focus focus = xszj_focus }
+		prerequisite = { focus = shzygz_focus }
 		x = 9
 		y = 5
 		cost = 12
@@ -954,22 +931,21 @@ focus_tree = {
 		id = slyz_focus
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = shzygz_focus }
-		#prerequisite = { focus = xszj_focus }
+		prerequisite = { focus = xszj_focus }
 		x = 12
 		y = 5
 		cost = 10
 		completion_reward = {
-			#add_research_slot = 1
-			add_research_slot = 4
+			add_research_slot = 1
+			}
 		}
-	}
 
 #########重视补给
 	focus = {
 		id = zsbj_focus
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = zsjj_focus }
-		#prerequisite = { focus = xszj_focus }
+		prerequisite = { focus = xszj_focus }
 		x = 14
 		y = 5
 		cost = 10
@@ -1009,31 +985,6 @@ focus_tree = {
 					level = 10
 					instant_build = yes
 				}
-				
-				add_resource = {
-					type = rubber
-					amount = 80
-				}
-				add_resource = {
-					type = oil
-					amount = 80
-				}
-				add_resource = {
-					type = aluminium
-					amount = 80
-				}
-				add_resource = {
-					type = tungsten
-					amount = 80
-				}
-				add_resource = {
-					type = steel
-					amount = 80
-				}
-				add_resource = {
-					type = chromium
-					amount = 80
-				}
 			}
 		}
 	}
@@ -1044,8 +995,8 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = hax_focus }
 		prerequisite = { focus = djz_focus focus = hbzj_focus }
-		#prerequisite = { focus = nxgc_focus }
-		#prerequisite = { focus = slyz_focus }
+		prerequisite = { focus = nxgc_focus }
+		prerequisite = { focus = slyz_focus }
 		x = 1
 		y = 6
 		cost = 13
@@ -1055,8 +1006,8 @@ focus_tree = {
 			navy_experience = 200
 			add_tech_bonus = {
 				name = navy_bonus
-				bonus = 0.2
-				uses = 4
+				bonus = 0.3
+				uses = 3
 				category = naval_doctrine
 			}
 		}
@@ -1067,8 +1018,8 @@ focus_tree = {
 		id = xzgjd_focus
 		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = djz_focus focus = hbzj_focus }
-		#prerequisite = { focus = nxgc_focus }
-		#prerequisite = { focus = slyz_focus }
+		prerequisite = { focus = nxgc_focus }
+		prerequisite = { focus = slyz_focus }
 		x = 5
 		y = 6
 		cost = 13
@@ -1078,8 +1029,8 @@ focus_tree = {
 			army_experience = 200
 			add_tech_bonus = {
 				name = land_doc_bonus
-				bonus = 0.2
-				uses = 2
+				bonus = 0.3
+				uses = 3
 				category = land_doctrine
 			}
 		}
@@ -1091,7 +1042,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = djz_focus focus = hbzj_focus }
 		prerequisite = { focus = nxgc_focus }
-		#prerequisite = { focus = slyz_focus }
+		prerequisite = { focus = slyz_focus }
 		x = 9
 		y = 6
 		cost = 13
@@ -1101,13 +1052,13 @@ focus_tree = {
 			if = { limit = { has_country_flag = aviation_effort_2_AB }
 				add_building_construction = {
 					type = air_base
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
 			add_tech_bonus = {
 				name =  air_doc_bonus
-				bonus = 0.2
+				bonus = 0.3
 				uses = 4
 				category = air_doctrine
 			}
@@ -1119,7 +1070,7 @@ focus_tree = {
 		id = rmgs_focus
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = slyz_focus  }
-		#prerequisite = { focus = djz_focus focus = hbzj_focus }
+		prerequisite = { focus = djz_focus focus = hbzj_focus }
 		x = 12
 		y = 6
 		cost = 10
@@ -1173,31 +1124,6 @@ focus_tree = {
 					level = 10
 					instant_build = yes
 				}
-				
-				add_resource = {
-					type = rubber
-					amount = 80
-				}
-				add_resource = {
-					type = oil
-					amount = 80
-				}
-				add_resource = {
-					type = aluminium
-					amount = 80
-				}
-				add_resource = {
-					type = tungsten
-					amount = 80
-				}
-				add_resource = {
-					type = steel
-					amount = 80
-				}
-				add_resource = {
-					type = chromium
-					amount = 80
-				}
 			}
 		}
 	}
@@ -1215,13 +1141,14 @@ focus_tree = {
 			add_tech_bonus = {
 				name = navy_bonus
 				bonus = 0.5
-				uses = 2
+				uses = 5
 				category = naval_doctrine
 			}
 			add_tech_bonus = {
 				name = ship_bonus
-				bonus = 0.15
-				uses = 3
+				ahead_reduction = 2
+				bonus = 0.3
+				uses = 5
 				category = bc_tech
 				category = bb_tech
 				category = shbb_tech
@@ -1242,13 +1169,14 @@ focus_tree = {
 			add_tech_bonus = {
 				name = navy_bonus
 				bonus = 0.5
-				uses = 2
+				uses = 5
 				category = naval_doctrine
 			}
 			add_tech_bonus = {
 				name = navy_air_bonus
-				bonus = 0.15
-				uses = 3
+				ahead_reduction = 2
+				bonus = 0.3
+				uses = 5
 				category = cv_tech
 				category = naval_air
 			}
@@ -1268,11 +1196,12 @@ focus_tree = {
 			add_tech_bonus = {
 				name = land_doc_bonus
 				bonus = 0.5
-				uses = 2
+				uses = 5
 				category = land_doctrine
 			}
 			add_tech_bonus = {
 				name = armor_bonus
+				ahead_reduction = 2
 				bonus = 0.15
 				uses = 4
 				category = armor
@@ -1293,7 +1222,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = land_doc_bonus
 				bonus = 0.5
-				uses = 2
+				uses = 5
 				category = land_doctrine
 			}
 			add_tech_bonus = {
@@ -1318,11 +1247,12 @@ focus_tree = {
 			add_tech_bonus = {
 				name =  air_doc_bonus
 				bonus = 0.5
-				uses = 2
+				uses = 5
 				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = air_bonus
+				ahead_reduction = 2
 				bonus = 0.15
 				uses = 4
 				category = light_fighter
@@ -1344,11 +1274,12 @@ focus_tree = {
 			add_tech_bonus = {
 				name =  air_doc_bonus
 				bonus = 0.5
-				uses = 2
+				uses = 5
 				category = air_doctrine
 			}
 			add_tech_bonus = {
 				name = air_bonus
+				ahead_reduction = 2
 				bonus = 0.15
 				uses = 4
 				category = cat_strategic_bomber
@@ -1468,9 +1399,6 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = xmjbq_idea
 			add_ideas = xdbj_idea
-			set_technology = {
-				transport_plane2 = 1
-			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1498,31 +1426,6 @@ focus_tree = {
 					type = infrastructure
 					level = 10
 					instant_build = yes
-				}
-				
-				add_resource = {
-					type = rubber
-					amount = 80
-				}
-				add_resource = {
-					type = oil
-					amount = 80
-				}
-				add_resource = {
-					type = aluminium
-					amount = 80
-				}
-				add_resource = {
-					type = tungsten
-					amount = 80
-				}
-				add_resource = {
-					type = steel
-					amount = 80
-				}
-				add_resource = {
-					type = chromium
-					amount = 80
 				}
 			}
 		}
@@ -1577,8 +1480,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = motorized_bonus
-				bonus = 0.15
-				uses = 2
+				ahead_reduction = 2
+				bonus = 0.3
+				uses = 4
 				category = motorized_equipment
 			}
 		}
@@ -1621,7 +1525,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = fleet_in_being_bonus
-				bonus = 0.15
+				ahead_reduction = 2
+				bonus = 0.3
 				uses = 7
 				category = rocketry
 				category = jet_technology
@@ -1640,7 +1545,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = fleet_in_being_bonus
-				bonus = 0.15
+				bonus = 0.2
 				uses = 6
 				category = electronics
 			}
@@ -1673,9 +1578,9 @@ focus_tree = {
 			add_ideas = hpzy_idea
 			add_tech_bonus = {
 				name = nuclear_bonus
-				ahead_reduction = 0.5
+				ahead_reduction = 1
 				uses = 2
-				bonus = 0.2
+				bonus = 0.5
 				category = nuclear
 			}
 		}
@@ -1873,7 +1778,7 @@ focus_tree = {
 			
 			}
 		}
-		
+
 #########建立新中国
 	focus = {
 		id = jlxzg_focus
@@ -1894,5 +1799,7 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = wtt_news.37 days = 3 random = 72 }
 			}
+			add_research_slot = 1
 		}
 	}
+}

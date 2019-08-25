@@ -274,6 +274,14 @@ guiTypes = {
 				format = "LEFT"
 	
 			}			
+##改
+			gridboxtype = {
+				name = "PRC_tech_tree"
+				position = { x = 140 y = 425 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+	
+			}				
 
 			gridboxtype = {
 				name = "motorised_infantry_tree"
@@ -779,7 +787,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "armour_subtitle_gundam"
 					#position = { x = -280 y = 1070  }
-					position = { x = -84 y = 1070  }
+					position = { x = -84 y = 1070  }		#标题位置
 					textureFile = ""
 					font = "hoi_33"
 					borderSize = {x = 0 y = 4}
@@ -828,12 +836,12 @@ guiTypes = {
 			gridboxtype = {
 				name = "PRC_gundam1_tree"
 				#position = { x = -280 y = 1300 }
-				position = { x = 380 y = 1290 }				#容器位置
 				#size = { width = 80% height = 80% }
-				size = { width = 0 height = 140 }			#容器大小
 				#slotsize = { width = 100 height = 100 }
+				position = { x = 380 y = 1290 }				#容器位置
+				size = { width = 0 height = 140 }			#容器大小
 				slotsize = { width = 70 height = 70 }		#科技树间距
-				format = "UP"								#顶端正中央
+				format = "UP"
 			}
 		}
 

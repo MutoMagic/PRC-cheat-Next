@@ -5,6 +5,8 @@ sub_units = {
 		map_icon_category = armored
 		priority = 2510
 		active = yes
+		special_forces = yes		#特种部队
+		can_be_parachuted = yes		#伞兵
 		
 		type = {
 			armor
@@ -17,14 +19,9 @@ sub_units = {
 			category_front_line
 			category_all_armor
 			category_army
-			
-			category_special_forces	#特战
-			category_line_artillery	#线膛炮
-			category_artillery		#炮兵
 		}
 		
-		special_forces = yes	#特种部队
-		can_be_parachuted = yes	#伞兵
+		
 
 		combat_width = 10
 
@@ -44,45 +41,33 @@ sub_units = {
 		soft_attack = 0.5
 
 		forest = {
-		    #attack = -0.3
-			#movement = -0.4
-		    attack = 3
-			movement = 4
+		    attack = -0.3
+			movement = -0.4
 		}
 		hills = 	{
-		    #attack = -0.1
-		    attack = 1
+		    attack = -0.1
 		}
 		mountain = 	{
-		    attack = 2
+		    attack = -0.2
 		}
 		jungle = {
-		    #attack = -0.4
-			#movement = -0.4
-		    attack = 4
-			movement = 4
+		    attack = -0.4
+			movement = -0.4
 		}
 		marsh = {
-		    #attack = -0.1 
-			#movement = -0.1
-		    attack = 1 
-			movement = 1
+		    attack = -0.1 
+			movement = -0.1
 		}
 		urban = {
-			#attack = -0.4
-			#defence = -0.1
-			attack = 4
-			defence = 1
+			attack = -0.4
+			defence = -0.1
 		}
 		river = { 
-			#attack = -0.2
-			#movement = -0.2
-			attack = 2
-			movement = 2
+			attack = -0.2 
+			movement = -0.2
 		}
 		amphibious = { 
-			#attack = -0.7
-			attack = 7
+			attack = -0.7
 		}
 	}
 }

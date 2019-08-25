@@ -8,8 +8,8 @@
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 	}
+	priority = 0	#后备役
 
-	priority = 0 #后备
 }
 division_template = {
 	name = "人民军队"				# Represents three-column local militia groups (Triangular Corps); poorly-equipped, lowest experience
@@ -32,7 +32,7 @@ units = {
 	division = {
 		name = "115 步兵师"
 		location = 5007
-		division_template = "军团"
+		division_template = "人民军队"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 
@@ -40,7 +40,7 @@ units = {
 	division = {
 		name = "120 步兵师"
 		location = 7208
-		division_template = "军团"
+		division_template = "人民军队"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 
@@ -48,60 +48,60 @@ units = {
 	division = {
 		name = "129 步兵师"
 		location = 517
-		division_template = "军团"
+		division_template = "人民军队"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 
 	}
 	
 	### Provincial Forces ###
-	division = { #  "1 Shensi 军团"
+	division = { #  "1  军团"
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		}
 		location = 12156
-		division_template = "人民军队"		# Provincial militia unit (poor equipment and training)
+		division_template = "军团"		# Provincial militia unit (poor equipment and training)
 		start_equipment_factor = 0.5
 
 	}
-	division = { #  "2 Shensi 军团"
+	division = { #  "2  军团"
 		division_name = {
 			is_name_ordered = yes
 			name_order = 2
 		}
 		location = 10733
-		division_template = "人民军队"		# Provincial militia unit (poor equipment and training)
+		division_template = "军团"		# Provincial militia unit (poor equipment and training)
 		start_equipment_factor = 0.5
 
 	}
-	division = { #  "3 Shensi 军团"
+	division = { #  "3  军团"
 		division_name = {
 			is_name_ordered = yes
 			name_order = 3
 		}
 		location = 10733
-		division_template = "人民军队"		# Provincial militia unit (poor equipment and training)
+		division_template = "军团"		# Provincial militia unit (poor equipment and training)
 		start_equipment_factor = 0.5
 
 	}
-	division = { #  "4 Shensi 军团"
+	division = { #  "4  军团"
 		division_name = {
 			is_name_ordered = yes
 			name_order = 4
 		}
 		location = 8049
-		division_template = "人民军队"		# Provincial militia unit (poor equipment and training)
+		division_template = "军团"		# Provincial militia unit (poor equipment and training)
 		start_equipment_factor = 0.5
 
 	}
-	division = { #  "5 Shensi 军团"
+	division = { #  "5  军团"
 		division_name = {
 			is_name_ordered = yes
 			name_order = 5
 		}
 		location = 8049
-		division_template = "人民军队"		# Provincial militia unit (poor equipment and training)
+		division_template = "军团"		# Provincial militia unit (poor equipment and training)
 		start_equipment_factor = 0.5
 
 	}
