@@ -1375,7 +1375,7 @@ technologies = {
 		}
 		
 		dependencies = {
-			PRC_tech = 1
+			PRC_tech = 1	#中国独有科技
 		}
 		
 		research_cost = 1
@@ -1434,7 +1434,7 @@ technologies = {
 		}
 		
 		dependencies = {
-			PRC_tech = 1
+			PRC_tech = 1	#中国独有科技
 		}
 		
 		research_cost = 1
@@ -1493,7 +1493,7 @@ technologies = {
 		}
 		
 		dependencies = {
-			PRC_tech = 1
+			PRC_tech = 1	#中国独有科技
 		}
 		
 		research_cost = 1
@@ -1822,15 +1822,15 @@ technologies = {
 			jet_tac_bomber_equipment_3
 		}
 
+		dependencies = {
+			PRC_tech = 1	#中国独有科技
+		}
+
 		research_cost = 2
 		start_year = 1950
 		folder = {
 			name = air_techs_folder
 			position = { x = 2 y = 16 }
-		}
-
-		dependencies = {
-			PRC_tech = 1
 		}
 
 		categories = {
@@ -2015,7 +2015,7 @@ technologies = {
 		start_year = 1950
 
 		dependencies = {
-			PRC_tech = 1
+			PRC_tech = 1	#中国独有科技
 		}
 
 		folder = {

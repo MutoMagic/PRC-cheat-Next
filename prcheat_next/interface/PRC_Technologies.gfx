@@ -125,16 +125,19 @@ spriteTypes = {
 	
 	### PRC Aircrafts ###
 	
+	#h20
 	SpriteType = {
 		name = "GFX_PRC_jet_strategic_bomber2_medium"
 		texturefile = "gfx/interface/technologies/PRC_gen6_bomber.dds"
 	}
 	
+	#h6k
 	SpriteType = {
 		name = "GFX_PRC_jet_tactical_bomber3_medium"
 		texturefile = "gfx/interface/technologies/PRC_gen5_bomber.dds"
 	}
 	
+	#j15
 	SpriteType = {
 		name = "GFX_PRC_jet_cv_heavy_fighter1_medium"
 		texturefile = "gfx/interface/technologies/PRC_jet_cv_fighter.dds"
@@ -495,25 +498,25 @@ spriteTypes = {
 		name = "GFX_jet_cv_fighter2_medium"
 		texturefile = "gfx/interface/technologies/jet_cv_fighter.dds"
 	}	
-
+	
+	#舰载重型喷气式战斗机
 	SpriteType = {
 		name = "GFX_jet_cv_heavy_fighter1_medium"
 		texturefile = "gfx/interface/technologies/jet_cv_fighter.dds"
 	}
 	
+	#喷气式战术轰炸机Ⅲ型
 	SpriteType = {
 		name = "GFX_jet_tactical_bomber3_medium"
 		texturefile = "gfx/interface/technologies/gen5_bomber.dds"
 	}
 	
+	#喷气式战略轰炸机Ⅱ型
 	SpriteType = {
 		name = "GFX_jet_strategic_bomber2_medium"
 		texturefile = "gfx/interface/technologies/gen6_bomber.dds"
 	}
+
 	
-	SpriteType = {
-		name = "GFX_transport_plane2_medium"
-		texturefile = "gfx/interface/technologies/AST_gen3_bomber.dds"
-	}
 	
 }
