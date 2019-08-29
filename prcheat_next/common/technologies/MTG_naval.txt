@@ -1327,6 +1327,9 @@ early_ship_hull_carrier = {
 		
 		#子技术
 		sub_technologies = {
+			tech_dummy
+		}
+		sub_technologies = {
 			tech_ship_hull_nuclear_carrier_1
 		}
 	}
@@ -1848,6 +1851,9 @@ early_ship_hull_carrier = {
 		}
 		
 		#子技术
+		sub_technologies = {
+			tech_dummy
+		}
 		sub_technologies = {
 			tech_ship_hull_nuclear_submarine_1
 		}
@@ -3634,5 +3640,18 @@ early_ship_hull_carrier = {
 		allow = {
 			always = no
 		}
+	}
+	
+	#空技术，提供层级关系，用以显示子技术2图标
+	tech_dummy = {
+		
+		research_cost = 1
+		
+		start_year = 1936
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
 	}
 }

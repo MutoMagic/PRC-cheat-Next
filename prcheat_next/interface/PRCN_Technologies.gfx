@@ -1,5 +1,12 @@
 spriteTypes = {
 	
+	#子技术2图标
+	spriteType = {
+		name = "GFX_subtech_nuke"
+		texturefile = "gfx/interface/subtech_nuke.dds"
+		legacy_lazy_load = no
+	}
+	
 	### PRC Aircrafts ###
 	
 	#j15
