@@ -1,7 +1,7 @@
 ﻿l_english:
- cv_jet_heavy_fighter:0 "舰载重型喷气战斗机"
- jet_cv_heavy_fighter_equipment:0 "舰载重型喷气战斗机"
- jet_cv_heavy_fighter_equipment_desc:0 "舰载重型喷气式战斗机可以执行战斗机和海军轰炸机任务，遥不可及的航程和巨大的载弹量足以让它成为海上空中霸主"
+ #cv_jet_heavy_fighter:0 "舰载重型喷气战斗机"
+ #jet_cv_heavy_fighter_equipment:0 "舰载重型喷气战斗机"
+ #jet_cv_heavy_fighter_equipment_desc:0 "舰载重型喷气式战斗机可以执行战斗机和海军轰炸机任务，遥不可及的航程和巨大的载弹量足以让它成为海上空中霸主"
  jet_cv_heavy_fighter_equipment_1:0 "舰载重型喷气式战斗机Ⅰ型"
  jet_cv_heavy_fighter_equipment_1_desc:0 "舰载重型喷气式战斗机在普通舰载喷气式战斗机的基础上进行了放大化改造，增加了航程和载弹量，以获得更高的战斗力"
  PRC_jet_cv_heavy_fighter_equipment_1:0 "J-15舰载重型喷气式战斗机"
