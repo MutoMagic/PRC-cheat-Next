@@ -1,0 +1,60 @@
+spriteTypes = {
+	
+	### Module ###
+	
+	spriteType = {
+		name = "GFX_SMI_dls_1"
+		textureFile = "gfx/interface/equipmentdesigner/sam_icn.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_SMI_sub_ship_nuclear_engine_1"
+		textureFile = "gfx/interface/equipmentdesigner/engine_icn_n.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_SMI_carrier_ship_nuclear_engine_1"
+		textureFile = "gfx/interface/equipmentdesigner/engine_icn_n.dds"
+	}
+	
+	### Category ###
+	
+	spriteType = {
+		name = "GFX_SMI_dls"
+		textureFile = "gfx/interface/equipmentdesigner/ssm_icn.dds"
+	}
+	
+	### Topview ###
+	
+	spriteType = {
+		name = "GFX_SM_submarine_hull_missile"
+		textureFile = "gfx/interface/equipmentdesigner/submarine_hull_missile.dds"
+	}
+	spriteType = {
+		name = "GFX_SM_submarine_hull_missile@highlight"
+		textureFile = "gfx/interface/equipmentdesigner/submarine_hull_missile@highlight.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_SM_light_hull_front1_missile"
+		textureFile = "gfx/interface/equipmentdesigner/light_hull_front1_missile.dds"
+	}
+	spriteType = {
+		name = "GFX_SM_light_hull_front1_missile@highlight"
+		textureFile = "gfx/interface/equipmentdesigner/light_hull_front1_missile@highlight.dds"
+	}
+	spriteType = {
+		name = "GFX_SM_light_hull_rear1_missile"
+		textureFile = "gfx/interface/equipmentdesigner/light_hull_rear1_missile.dds"
+	}
+	spriteType = {
+		name = "GFX_SM_light_hull_rear1_missile@highlight"
+		textureFile = "gfx/interface/equipmentdesigner/light_hull_rear1_missile@highlight.dds"
+	}
+	
+}
+
+
+
+
+

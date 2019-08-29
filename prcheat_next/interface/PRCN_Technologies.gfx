@@ -1,0 +1,57 @@
+spriteTypes = {
+	
+	### PRC Aircrafts ###
+	
+	#j15
+	SpriteType = {
+		name = "GFX_PRC_jet_cv_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/PRC_jet_cv_fighter.dds"
+	}
+	
+	#h6k
+	SpriteType = {
+		name = "GFX_PRC_jet_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/PRC_gen5_bomber.dds"
+	}
+	
+	#h20
+	SpriteType = {
+		name = "GFX_PRC_jet_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/PRC_gen6_bomber.dds"
+	}
+	
+	### Generic Aircrafts ###
+	
+	#舰载重型喷气式战斗机
+	SpriteType = {
+		name = "GFX_jet_cv_heavy_fighter1_medium"
+		texturefile = "gfx/interface/technologies/jet_cv_fighter.dds"
+	}
+	
+	#喷气式战术轰炸机Ⅲ型
+	SpriteType = {
+		name = "GFX_jet_tactical_bomber3_medium"
+		texturefile = "gfx/interface/technologies/gen5_bomber.dds"
+	}
+	
+	#喷气式战略轰炸机Ⅱ型
+	SpriteType = {
+		name = "GFX_jet_strategic_bomber2_medium"
+		texturefile = "gfx/interface/technologies/gen6_bomber.dds"
+	}
+	
+	### Electronic Mechanical Engineering ###
+	
+	#双臂发射系统
+	SpriteType = {
+		name = "GFX_rocket_engines_4_medium"
+		texturefile = "gfx/interface/technologies/rocket_engines_4.dds"
+	}
+	
+	#核动力装置
+	SpriteType = {
+		name = "GFX_nuclear_marine_propulsion_medium"
+		texturefile = "gfx/interface/technologies/nuclear_marine_propulsion.dds"
+	}
+	
+}
